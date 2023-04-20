@@ -1,0 +1,29 @@
+footer {
+    display: grid;
+    grid-template-rows: 1;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: space-between;
+    padding: 1rem;
+    align-items: top;
+    width: 85%;
+    margin: 0 auto;
+}
+img{
+    max-width: 10rem;
+}
+
+li{
+    list-style: none;
+    padding: 0.5rem;
+    border-bottom: 2px solid transparent;
+    width: 30%;
+}
+li:hover{
+    transition: .5s ease-in-out;
+    border-bottom: 2px solid #000;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
