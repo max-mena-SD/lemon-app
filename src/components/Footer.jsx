@@ -1,9 +1,10 @@
 import "./css/Footer.css";
+import placeHolderImg from "./img/littleLemonLogo.jpg";
 
 function Footer() {
   return (
     <footer>
-      <img src="#" alt="Little Lemon footer image" />
+      <img src={placeHolderImg} alt="Little Lemon footer image" />
       <article>
         <h2>Doormat Navigation</h2>
         <ul>

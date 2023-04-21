@@ -11,3 +11,10 @@ button{
     width: 50%;
     
 }
+button:hover{
+    transition: .5s;
+    background-color: #EE9972;
+    color: #000;
+    cursor: pointer;
+    font-weight: 800;
+}

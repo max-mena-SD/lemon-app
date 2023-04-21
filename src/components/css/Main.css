@@ -1,12 +1,10 @@
-* {
-  box-sizing: border-box;
-  overflow: hidden;
-}
+/* General */
 body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
 }
+
 h1,
 h2,
 h3,
@@ -15,64 +13,66 @@ h5,
 h6 {
   font-weight: normal;
 }
+
 a {
   text-decoration: none;
   color: inherit;
 }
-img {
-  max-width: 100%;
-  height: auto;
-}
 
+/* Main Section */
 main {
   display: grid;
   width: 100%;
   margin: 0 auto;
-  grid-template-rows: repeat(4, 1fr);
+  grid-template-rows: repeat(4, auto);
 }
 
-section {
+.reservation {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   justify-content: center;
+  background-color: #495e57;
 }
 
 .left,
 .right {
-  display: grid;
-  /* border: 1px dotted gray; */
-  /* justify-content: center; */
-}
-article {
   justify-content: right;
+  display: grid;
 }
 
 .imageReservation {
   width: 80%;
   height: 30vh;
-  /* border: 1px dotted gray; */
   margin: auto;
+  overflow: hidden;
+  border-radius: 1%;
 }
 
 .imageReservation img {
-    width: 100%;
-    height: auto;
-    max-width: 100%;
-    /* max-height: 100%; */
-    /* margin-left: 200px; */
+  width: 100%;
+  height: auto;
+  max-width: 100%;
 }
+
 .left h2 {
   font-family: "Markazi Text", karla;
   font-weight: 100;
   font-size: 3em;
   color: #f4ce14;
+  margin: 0;
 }
+
 .left h3 {
   font-family: "Markazi Text", karla;
   font-weight: 100;
   font-size: 2em;
+  margin: 0;
+  color: #fff;
 }
+
 .left p {
+  margin: 0;
+  color: #fff;
   font-family: karla;
   font-size: 1em;
   padding-top: 2em;
@@ -80,16 +80,109 @@ article {
   padding-bottom: 1em;
   line-height: 1.5;
 }
-h2,
-h3,
-p {
-  margin: 0;
-  color: #fff;
-}
+
 .reservation Button {
   margin: 1em 1em 1em 0;
 }
 
-.reservation {
-  background-color: #495e57;
+/* Menu section */
+.menu {
+  display: grid;
+  background-color: #fff;
+  grid-template-columns: 1fr 2fr 1fr;
+}
+
+.menuItem {
+  display: flex;
+  flex-direction: column;
+}
+
+.itemTop {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding-top: 2em;
+}
+
+.itemTop Button {
+  margin: 1em 1em 1em 50%;
+}
+
+.itemBottom {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding-top: 2em;
+  column-gap: 2em;
+}
+
+.specialItem {
+  width: 100%;
+  display: grid;
+  grid-template-rows: repeat(4, auto);
+  border-radius: 3%;
+  padding: 0;
+  overflow: hidden;
+  background-color: rgba(128, 128, 128, .1);
+}
+
+.imageItem {
+  width: 100%;
+  height: 190px;
+  margin: 0 ;
+  overflow: hidden;
+}
+.imageItem img {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  /* max-height: 100%; */
+}
+
+.itemTitle{
+
+  margin: 1em;
+}
+
+.itemTitle h4 {
+  display: inline;
+  font-family: "Markazi Text", karla;
+  font-weight: 400;
+  font-size: 1.5em;
+}
+
+.itemTitle .priceTag{
+  padding-left: 2em;
+  color: #EE9972;
+
+}
+
+.specialItem p {
+  margin: 0 1em;
+  font-family: karla;
+  font-size: 1.1em;
+}
+p.orderLink{
+  padding-top: 2em;
+  padding-bottom: 2em;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1em;
+  font-weight: 600;
+}
+
+
+
+/* Testimonial section */
+.testimonial {
+  display: grid;
+  background-color: #fff;
+  grid-template-columns: 1fr 2fr 1fr;
+}
+
+.testimonialItem {
+}
+
+/* About section */
+.about {
+  display: grid;
+  background-color: #fff;
+  grid-template-columns: repeat(4, 1fr);
 }
