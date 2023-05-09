@@ -1,0 +1,68 @@
+.reservation {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: center;
+  background-color: #495e57;
+}
+
+.left {
+  grid-column: 2/3;
+}
+.right {
+  grid-column: 3/4;
+}
+
+.left,
+.right {
+  justify-content: right;
+  display: grid;
+}
+
+.imageReservation {
+  height: 30vh;
+  margin: auto;
+  border-radius: 1%;
+  width: 1fr;
+  aspect-ratio: 4/3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.right .imageReservation img {
+  width: 1fr;
+  object-fit: contain;
+  max-width: 100%;
+}
+
+.left h2 {
+  font-family: "Markazi Text", karla;
+  font-weight: 100;
+  font-size: 3em;
+  color: #f4ce14;
+  margin: 0;
+}
+
+.left h3 {
+  font-family: "Markazi Text", karla;
+  font-weight: 100;
+  font-size: 2em;
+  margin: 0;
+  color: #fff;
+}
+
+.left p {
+  margin: 0;
+  color: #fff;
+  font-family: karla;
+  font-size: 1em;
+  padding-top: 2em;
+  padding-right: 6em;
+  padding-bottom: 1em;
+  line-height: 1.5;
+}
+
+.reservation Button {
+  margin: 1em 1em 1em 0;
+}

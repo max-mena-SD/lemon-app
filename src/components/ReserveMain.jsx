@@ -1,10 +1,10 @@
 import Button from "./Button";
+import "./css/ReserveMain.css";
 import reservationImage from "./img/gourmet_dish_1.jpg";
 
 function ReserveMain() {
   return (
     <section className="reservation" id="reservation">
-      <article></article>
       <article className="left">
         <h2>Little Lemon</h2>
         <h3>Chicago</h3>
@@ -21,7 +21,6 @@ function ReserveMain() {
           <img src={reservationImage} alt="image of a menu item" />
         </div>
       </article>
-      <article></article>
     </section>
   );
 }

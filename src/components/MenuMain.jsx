@@ -8,7 +8,6 @@ import "./css/MenuMain.css";
 function MenuMain() {
   return (
     <section className="menu" id="menu">
-      <div></div>
       <article className="menuItem">
         <section className="itemTop">
           <h2>This week special!</h2>
@@ -73,7 +72,6 @@ function MenuMain() {
             .
             . */}
       </article>
-      <div></div>
     </section>
   );
 }

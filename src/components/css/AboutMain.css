@@ -1,0 +1,39 @@
+.about {
+  margin-top: 5vmin;
+    display: grid;
+    background-color: #fff;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .about article h2,
+  .about article h3,
+    .about article p {
+    color: black;
+  }
+
+/* Location of the images */
+  .right {
+    aspect-ratio: 4 / 3;
+    width: 30vmin;
+  }
+  .card {
+    width: 30vmin;
+    aspect-ratio: 4 / 3;
+    border-radius: 1vmin;
+    overflow: hidden;
+  }
+  .card img {
+    width: 1fr;
+    max-width: 105%;
+
+  }
+  .card:nth-child(1){
+    transform: translateX(45%) translateY(5%);
+    z-index: 2;
+    box-shadow: -1px 1px  white ;
+  }
+  .card:nth-child(2){
+    transform: translateX(10%) translateY(-10%);
+    z-index: 1;
+  }
+/* Location of the images */

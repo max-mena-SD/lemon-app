@@ -1,0 +1,12 @@
+.testimonial {
+    margin-top: 5vmin;
+    background-color: #495e57;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+}
+.center {
+    grid-column: 2 / 3;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    column-gap: 20px;
+}

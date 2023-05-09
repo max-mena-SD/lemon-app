@@ -1,0 +1,57 @@
+.cardTestimony {
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: auto;
+  grid-template-areas:
+    "rating  rating"
+    "image    name"
+    "review  review";
+  background-color: white;
+  border-radius: 3px;
+  margin-top: 3vmin;
+  margin-bottom: 3vmin;
+  padding-left: 3px;
+  padding-right: 3px;
+}
+.rating {
+  grid-area: rating;
+  justify-content: center;
+  /* border: 1px solid black; */
+}
+.rating h3 {
+  text-align: center;
+  font-family: "Markazi Text", karla;
+  font-weight: 500;
+  font-size: 1.5em;
+}
+
+.image {
+  grid-area: image;
+  margin: auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.image img {
+  width: 100%;
+  object-fit: contain;
+  border-radius: 3px;
+}
+.name {
+    margin: auto;
+  grid-area: name;
+  justify-content: center;
+}
+.review {
+    margin: auto;
+  grid-area: review;
+}
+.review p,
+.name p {
+  word-wrap: break-word;
+  font-family: karla;
+  padding: 5%;
+  text-align: end;
+}
