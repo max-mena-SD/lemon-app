@@ -1,6 +1,6 @@
 import "./css/Button.css";
-function Button({ text, onClick }) {
-  return <button>{text}</button>;
+function Button({ text, openModal }) {
+  return <button onClick={openModal}>{text}</button>;
 }
 
 export default Button;

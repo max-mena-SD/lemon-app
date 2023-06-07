@@ -37,3 +37,10 @@
     z-index: 1;
   }
 /* Location of the images */
+
+/* .left p{
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+} */

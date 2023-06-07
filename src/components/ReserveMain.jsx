@@ -1,8 +1,10 @@
 import Button from "./Button";
 import "./css/ReserveMain.css";
+// import BookingForm from "./BookingForm";
 import reservationImage from "./img/gourmet_dish_1.jpg";
 
 function ReserveMain() {
+  const handleSubmit = () => {};
   return (
     <section className="reservation" id="reservation">
       <article className="left">
@@ -14,7 +16,7 @@ function ReserveMain() {
           consectetur adipisicing elit. Iste sit quasi, voluptatibus beatae
           perferendis in repellat eius laboriosam sed rerum?
         </p>
-        <Button text="Reserve a table" />
+        <Button openModal={handleSubmit} text="Reserve a table" />
       </article>
       <article className="right">
         <div className="imageReservation">
