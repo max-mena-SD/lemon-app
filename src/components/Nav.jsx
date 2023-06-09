@@ -5,22 +5,22 @@ function Nav() {
     <nav>
       <ul className="nav-links">
         <li>
-          <a src="#">Home</a>
+          {/* <a href="#main">Home</a> */}
         </li>
         <li>
-          <a src="#">About</a>
+          <a href="#about">About</a>
         </li>
         <li>
-          <a src="#">Menu</a>
+          <a href="#menu">Menu</a>
         </li>
         <li>
-          <a src="#">Reservations</a>
+          <a href="#reservation">Reservations</a>
         </li>
         <li>
-          <a src="#">Order</a>
+          {/* <a href="#">Order</a> */}
         </li>
         <li>
-          <a src="#">Login</a>
+          {/* <a href="#">Login</a> */}
         </li>
       </ul>
     </nav>
