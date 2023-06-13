@@ -42,39 +42,31 @@ function BookingForm({ openModal, setOpenModal }) {
         <dialog open>
           <h2 className="h2-form">Reserve a table.</h2>
           <form action="" className="modal-form">
-            <label htmlFor="rest-date">
-              Choose date
-              <input type="date" id="rest-date" onChange={handleDate} />
-            </label>
-            <label htmlFor="res-time">
-              Choose time
-              <select name="res-time" id="res-time" onChange={handleTime}>
-                <option value="1700">17:00</option>
-                <option value="1800">18:00</option>
-                <option value="1900">19:00</option>
-                <option value="2000">20:00</option>
-                <option value="2100">21:00</option>
-                <option value="2200">22:00</option>
-              </select>
-            </label>
-            <label htmlFor="guests">
-              Number of guests
-              <input
-                type="number"
-                placeholder="1"
-                min={"1"}
-                max={"10"}
-                id="guests"
-                onChange={handleNumber}
-              />
-            </label>
-            <label htmlFor="occasion">
-              Occasion
-              <select name="occasion" id="occasion" onChange={handleOccasion}>
-                <option value="birthday">Birthday</option>
-                <option value="anniversary">Anniversary</option>
-              </select>
-            </label>
+            <label htmlFor="rest-date">Choose date</label>
+            <input type="date" id="rest-date" onChange={handleDate} />
+            <label htmlFor="res-time">Choose time</label>
+            <select name="res-time" id="res-time" onChange={handleTime}>
+              <option value="1700">17:00</option>
+              <option value="1800">18:00</option>
+              <option value="1900">19:00</option>
+              <option value="2000">20:00</option>
+              <option value="2100">21:00</option>
+              <option value="2200">22:00</option>
+            </select>
+            <label htmlFor="guests">Number of guests</label>
+            <input
+              type="number"
+              placeholder="1"
+              min={"1"}
+              max={"10"}
+              id="guests"
+              onChange={handleNumber}
+            />
+            <label htmlFor="occasion">Occasion</label>
+            <select name="occasion" id="occasion" onChange={handleOccasion}>
+              <option value="birthday">Birthday</option>
+              <option value="anniversary">Anniversary</option>
+            </select>
             <input
               type="submit"
               value={"Make your reservation"}

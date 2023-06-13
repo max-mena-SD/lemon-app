@@ -1,4 +1,5 @@
 dialog {
+  font-family: karla;
   margin-top: 50px;
   height: 50vh;
   min-height: 300px;
@@ -11,25 +12,56 @@ dialog {
   -moz-box-shadow: 11px 10px 12px 8px rgba(0, 0, 0, 0.42);
 }
 
-input[type="submit"] {
-  margin: auto;
-  display: block;
-  margin-top: 1vh;
-}
-
 .h2-form {
-    display: block;
-    /* justify-content: center; */
-    /* align-items: center; */
-    margin: 0 auto;
-}
-
-label {
-  display: block;
-  margin: 2vh;
+    /* border: 1px solid black; */
+    border-radius: 3px;
+    text-align: center;
+    padding: 2vh;
 }
 
 .modal-form {
   align-items: center;
   justify-content: center;
+}
+
+label, select, input {
+  display: block;
+  width: 80%;
+  margin: 1vh auto;
+  border: none;
+  font-size: 18px;
+  padding: 0;
+  text-align: center;
+}
+
+input, select{
+  border-bottom: 1px solid gray;
+  /* border-left: 1px solid gray; */
+  border-right: 1px solid gray;
+  border-radius: 3px;
+  font-size: 16px;
+  font-family: karla;
+  color: gray;
+}
+
+input[type="submit"]{
+  margin-top: 2vh;
+  height: 5vh;
+  border: none;
+  background-color: #EE9972;
+}
+
+input[type="submit"]:hover{
+  color: black;
+  border: 1.5px solid black;
+}
+
+input[type="submit"]:active{
+  color: black;
+  background-color: #F4CE14;
+  border: none;
+}
+
+label{
+  text-align: left;
 }
