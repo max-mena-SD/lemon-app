@@ -8,6 +8,7 @@ import BookingForm from "./BookingForm";
 function ReserveMain() {
 
   const [openModal, setOpenModal] = useState(false);
+  const [booking, setBooking] = useState();
 
   const handleSubmit = () => {
     setOpenModal(true);
@@ -32,7 +33,7 @@ function ReserveMain() {
           <img src={reservationImage} alt="image of a menu item" />
         </div>
       </article>
-      {openModal && <BookingForm openModal={openModal} setOpenModal={setOpenModal} /> }
+      {openModal && <BookingForm openModal={openModal} setOpenModal={setOpenModal} booking={setBooking} /> }
     </section>
   );
 }

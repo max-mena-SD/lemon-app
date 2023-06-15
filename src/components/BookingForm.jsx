@@ -1,8 +1,8 @@
 import { useState } from "react";
 import "./css/BookingForm.css";
 
-function BookingForm({ openModal, setOpenModal }) {
-  const [booking, setBooking] = useState({
+function BookingForm({ openModal, setOpenModal, setBooking }) {
+  const [info, setInfo] = useState({
     date: "",
     time: "",
     number: "",
@@ -12,19 +12,19 @@ function BookingForm({ openModal, setOpenModal }) {
   const [reserv, setReserv] = useState(false);
 
   const handleDate = (e) => {
-    setBooking({ ...booking, date: e.target.value });
-    // setDate(e.target.value);
+    const cDate = e.target.value;
+    setBooking({ ...info, date: cDate });
   };
   const handleTime = (e) => {
-    setBooking({ ...booking, time: e.target.value });
+    setBooking({ ...info, time: e.target.value });
     // setTime(e.target.value);
   };
   const handleNumber = (e) => {
-    setBooking({ ...booking, number: e.target.value });
+    setBooking({ ...info, number: e.target.value });
     // setNumber(e.target.value);
   };
   const handleOccasion = (e) => {
-    setBooking({ ...booking, occasion: e.target.value });
+    setBooking({ ...info, occasion: e.target.value });
     // setOccasion(e.target.value);
   };
 
