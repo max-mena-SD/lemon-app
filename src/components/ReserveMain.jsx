@@ -36,7 +36,11 @@ function ReserveMain() {
       </article>
       {openModal && (
         // <BookingForm openModal={openModal} setOpenModal={setOpenModal} />
-        <BookingForm onSubmit={getData} />
+        <BookingForm
+          onSubmit={getData}
+          openModal={openModal}
+          setOpenModal={setOpenModal}
+        />
       )}
     </section>
   );

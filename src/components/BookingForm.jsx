@@ -2,7 +2,12 @@ import { useState } from "react";
 import "./css/BookingForm.css";
 
 // function BookingForm({ openModal, setOpenModal, onSubmit }) {
-function BookingForm({ onSubmit }) {
+function BookingForm({ onSubmit, openModal, setOpenModal }) {
+  //is the dialog showing or not
+  // const [openModal, setOpenModal] = useState(openModal);
+  // const open = openModal;
+  // const [reserv, setReserv] = useState(open);
+
   const [info, setInfo] = useState({
     date: "",
     time: "",
@@ -33,6 +38,8 @@ function BookingForm({ onSubmit }) {
   const handleSubmit = (e) => {
     e.preventDefault();
     onSubmit(info);
+    setOpenModal(false);
+    // setReserv(false);
     // setOpenModal(false);
   };
 
@@ -46,49 +53,50 @@ function BookingForm({ onSubmit }) {
 
   return (
     <>
-      {/* {!reserv && ( */}
-      <dialog open>
-        <h2 className="h2-form">Reserve a table.</h2>
-        <form className="modal-form" onSubmit={handleSubmit}>
-          <label htmlFor="rest-date">Choose date</label>
-          <input type="date" id="rest-date" onChange={handleDate} />
-          <label htmlFor="res-time">Choose time</label>
-          <select name="res-time" id="res-time" onChange={handleTime}>
-            <option value="1700">17:00</option>
-            <option value="1800">18:00</option>
-            <option value="1900">19:00</option>
-            <option value="2000">20:00</option>
-            <option value="2100">21:00</option>
-            <option value="2200">22:00</option>
-          </select>
-          <label htmlFor="guests">Number of guests</label>
-          <input
-            type="number"
-            placeholder="Select a quantity"
-            min={"1"}
-            max={"10"}
-            id="guests"
-            onChange={handleNumber}
-          />
-          <label htmlFor="occasion">Occasion</label>
-          <select
-            name="occasion"
-            id="occasion"
-            value={info.occasion}
-            onChange={handleOccasion}
-          >
-            <option value="">Select an option</option>
-            <option value="birthday">Birthday</option>
-            <option value="anniversary">Anniversary</option>
-          </select>
-          <input
-            type="submit"
-            value={"Make your reservation"}
-            onClick={() => {}}
-          />
-        </form>
-      </dialog>
-      {/* )} */}
+      {/* {reserv && ( */}
+      {openModal && (
+        <dialog open>
+          <h2 className="h2-form">Reserve a table.</h2>
+          <form className="modal-form" onSubmit={handleSubmit}>
+            <label htmlFor="rest-date">Choose date</label>
+            <input type="date" id="rest-date" onChange={handleDate} />
+            <label htmlFor="res-time">Choose time</label>
+            <select name="res-time" id="res-time" onChange={handleTime}>
+              <option value="1700">17:00</option>
+              <option value="1800">18:00</option>
+              <option value="1900">19:00</option>
+              <option value="2000">20:00</option>
+              <option value="2100">21:00</option>
+              <option value="2200">22:00</option>
+            </select>
+            <label htmlFor="guests">Number of guests</label>
+            <input
+              type="number"
+              placeholder="Select a quantity"
+              min={"1"}
+              max={"10"}
+              id="guests"
+              onChange={handleNumber}
+            />
+            <label htmlFor="occasion">Occasion</label>
+            <select
+              name="occasion"
+              id="occasion"
+              value={info.occasion}
+              onChange={handleOccasion}
+            >
+              <option value="">Select an option</option>
+              <option value="birthday">Birthday</option>
+              <option value="anniversary">Anniversary</option>
+            </select>
+            <input
+              type="submit"
+              value={"Make your reservation"}
+              onClick={() => {}}
+            />
+          </form>
+        </dialog>
+      )}
     </>
   );
 }
