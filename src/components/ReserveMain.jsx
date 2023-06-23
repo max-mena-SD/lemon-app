@@ -1,18 +1,19 @@
 import { useState } from "react";
 import Button from "./Button";
 import "./css/ReserveMain.css";
-// import BookingForm from "./BookingForm";
 import reservationImage from "./img/gourmet_dish_1.jpg";
 import BookingForm from "./BookingForm";
 
 function ReserveMain() {
-
   const [openModal, setOpenModal] = useState(false);
-  const [booking, setBooking] = useState();
 
   const handleSubmit = () => {
     setOpenModal(true);
-    console.log("setOpenModal cambia a true")
+    // console.log("setOpenModal cambia a true");
+  };
+
+  const getData = (info) => {
+    console.log("data from child: ", info);
   };
 
   return (
@@ -33,7 +34,10 @@ function ReserveMain() {
           <img src={reservationImage} alt="image of a menu item" />
         </div>
       </article>
-      {openModal && <BookingForm openModal={openModal} setOpenModal={setOpenModal} booking={setBooking} /> }
+      {openModal && (
+        // <BookingForm openModal={openModal} setOpenModal={setOpenModal} />
+        <BookingForm onSubmit={getData} />
+      )}
     </section>
   );
 }

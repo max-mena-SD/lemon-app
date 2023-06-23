@@ -1,7 +1,8 @@
 import { useState } from "react";
 import "./css/BookingForm.css";
 
-function BookingForm({ openModal, setOpenModal, setBooking }) {
+// function BookingForm({ openModal, setOpenModal, onSubmit }) {
+function BookingForm({ onSubmit }) {
   const [info, setInfo] = useState({
     date: "",
     time: "",
@@ -9,77 +10,85 @@ function BookingForm({ openModal, setOpenModal, setBooking }) {
     occasion: "",
   });
 
-  const [reserv, setReserv] = useState(false);
+  // const [reserv, setReserv] = useState(false);
 
   const handleDate = (e) => {
     const cDate = e.target.value;
-    setBooking({ ...info, date: cDate });
+    // console.log("{%d}", cDate);
+    setInfo({ ...info, date: cDate });
   };
   const handleTime = (e) => {
-    setBooking({ ...info, time: e.target.value });
-    // setTime(e.target.value);
+    const cTime = e.target.value;
+    setInfo({ ...info, time: cTime });
   };
   const handleNumber = (e) => {
-    setBooking({ ...info, number: e.target.value });
-    // setNumber(e.target.value);
+    const cNumber = e.target.value;
+    setInfo({ ...info, number: cNumber });
   };
   const handleOccasion = (e) => {
-    setBooking({ ...info, occasion: e.target.value });
-    // setOccasion(e.target.value);
+    const cOccasion = e.target.value;
+    setInfo({ ...info, occasion: cOccasion });
   };
 
-  const sendReserve = () => {
-    setReserv(true);
-    console.log(" Reserva ejecutada ");
-    setTimeout(() => {
-      setOpenModal(false);
-    }, 2000);
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    onSubmit(info);
+    // setOpenModal(false);
   };
+
+  // const sendReserve = () => {
+  //   setReserv(true);
+  //   console.log(" Reserva ejecutada ");
+  //   setTimeout(() => {
+  //     setOpenModal(false);
+  //   }, 2000);
+  // };
 
   return (
     <>
-      {!reserv && (
-        <dialog open>
-          <h2 className="h2-form">Reserve a table.</h2>
-          <form action="" className="modal-form">
-            <label htmlFor="rest-date">Choose date</label>
-            <input type="date" id="rest-date" onChange={handleDate} />
-            <label htmlFor="res-time">Choose time</label>
-            <select name="res-time" id="res-time" onChange={handleTime}>
-              <option value="1700">17:00</option>
-              <option value="1800">18:00</option>
-              <option value="1900">19:00</option>
-              <option value="2000">20:00</option>
-              <option value="2100">21:00</option>
-              <option value="2200">22:00</option>
-            </select>
-            <label htmlFor="guests">Number of guests</label>
-            <input
-              type="number"
-              placeholder="1"
-              min={"1"}
-              max={"10"}
-              id="guests"
-              onChange={handleNumber}
-            />
-            <label htmlFor="occasion">Occasion</label>
-            <select name="occasion" id="occasion" onChange={handleOccasion}>
-              <option value="birthday">Birthday</option>
-              <option value="anniversary">Anniversary</option>
-            </select>
-            <input
-              type="submit"
-              value={"Make your reservation"}
-              onClick={sendReserve}
-            />
-          </form>
-        </dialog>
-      )}
-      {reserv && (
-        <dialog>
-          <h2>Reservado</h2>
-        </dialog>
-      )}
+      {/* {!reserv && ( */}
+      <dialog open>
+        <h2 className="h2-form">Reserve a table.</h2>
+        <form className="modal-form" onSubmit={handleSubmit}>
+          <label htmlFor="rest-date">Choose date</label>
+          <input type="date" id="rest-date" onChange={handleDate} />
+          <label htmlFor="res-time">Choose time</label>
+          <select name="res-time" id="res-time" onChange={handleTime}>
+            <option value="1700">17:00</option>
+            <option value="1800">18:00</option>
+            <option value="1900">19:00</option>
+            <option value="2000">20:00</option>
+            <option value="2100">21:00</option>
+            <option value="2200">22:00</option>
+          </select>
+          <label htmlFor="guests">Number of guests</label>
+          <input
+            type="number"
+            placeholder="Select a quantity"
+            min={"1"}
+            max={"10"}
+            id="guests"
+            onChange={handleNumber}
+          />
+          <label htmlFor="occasion">Occasion</label>
+          <select
+            name="occasion"
+            id="occasion"
+            value={info.occasion}
+            onChange={handleOccasion}
+          >
+            <option value="">Select an option</option>
+            <option value="birthday">Birthday</option>
+            <option value="anniversary">Anniversary</option>
+          </select>
+          <input
+            type="submit"
+            value={"Make your reservation"}
+            onClick={() => {}}
+          />
+        </form>
+      </dialog>
+      {/* )} */}
     </>
   );
 }
