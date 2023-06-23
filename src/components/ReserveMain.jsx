@@ -9,7 +9,6 @@ function ReserveMain() {
 
   const handleSubmit = () => {
     setOpenModal(true);
-    // console.log("setOpenModal cambia a true");
   };
 
   const getData = (info) => {
@@ -35,7 +34,6 @@ function ReserveMain() {
         </div>
       </article>
       {openModal && (
-        // <BookingForm openModal={openModal} setOpenModal={setOpenModal} />
         <BookingForm
           onSubmit={getData}
           openModal={openModal}

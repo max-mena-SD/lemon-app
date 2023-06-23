@@ -1,13 +1,7 @@
 import { useState } from "react";
 import "./css/BookingForm.css";
 
-// function BookingForm({ openModal, setOpenModal, onSubmit }) {
 function BookingForm({ onSubmit, openModal, setOpenModal }) {
-  //is the dialog showing or not
-  // const [openModal, setOpenModal] = useState(openModal);
-  // const open = openModal;
-  // const [reserv, setReserv] = useState(open);
-
   const [info, setInfo] = useState({
     date: "",
     time: "",
@@ -15,11 +9,8 @@ function BookingForm({ onSubmit, openModal, setOpenModal }) {
     occasion: "",
   });
 
-  // const [reserv, setReserv] = useState(false);
-
   const handleDate = (e) => {
     const cDate = e.target.value;
-    // console.log("{%d}", cDate);
     setInfo({ ...info, date: cDate });
   };
   const handleTime = (e) => {
@@ -39,21 +30,10 @@ function BookingForm({ onSubmit, openModal, setOpenModal }) {
     e.preventDefault();
     onSubmit(info);
     setOpenModal(false);
-    // setReserv(false);
-    // setOpenModal(false);
   };
-
-  // const sendReserve = () => {
-  //   setReserv(true);
-  //   console.log(" Reserva ejecutada ");
-  //   setTimeout(() => {
-  //     setOpenModal(false);
-  //   }, 2000);
-  // };
 
   return (
     <>
-      {/* {reserv && ( */}
       {openModal && (
         <dialog open>
           <h2 className="h2-form">Reserve a table.</h2>
@@ -89,11 +69,7 @@ function BookingForm({ onSubmit, openModal, setOpenModal }) {
               <option value="birthday">Birthday</option>
               <option value="anniversary">Anniversary</option>
             </select>
-            <input
-              type="submit"
-              value={"Make your reservation"}
-              onClick={() => {}}
-            />
+            <input type="submit" value={"Make your reservation"} />
           </form>
         </dialog>
       )}
