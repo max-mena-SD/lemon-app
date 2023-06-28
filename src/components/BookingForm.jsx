@@ -42,6 +42,7 @@ function BookingForm({ onSubmit, openModal, setOpenModal }) {
             <input type="date" id="rest-date" onChange={handleDate} />
             <label htmlFor="res-time">Choose time</label>
             <select name="res-time" id="res-time" onChange={handleTime}>
+              <option value="">Select time slot</option>
               <option value="1700">17:00</option>
               <option value="1800">18:00</option>
               <option value="1900">19:00</option>
@@ -51,8 +52,9 @@ function BookingForm({ onSubmit, openModal, setOpenModal }) {
             </select>
             <label htmlFor="guests">Number of guests</label>
             <input
+              name="guests"
               type="number"
-              placeholder="Select a quantity"
+              placeholder="Select how many people"
               min={"1"}
               max={"10"}
               id="guests"

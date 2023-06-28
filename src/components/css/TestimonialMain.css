@@ -4,7 +4,7 @@
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
 }
-.center {
+.centerSection {
     grid-column: 2 / 3;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));

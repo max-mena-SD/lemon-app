@@ -36,9 +36,10 @@ function TestimonialMain() {
   const reviews = reviewsPull;
   return (
     <section className="testimonial" id="testimonial">
-      <section className="center">
+      <section className="centerSection">
         {reviews.map((review) => (
           <Testimony
+            key={review.name}
             rating={review.rating}
             image={review.image}
             name={review.name}
