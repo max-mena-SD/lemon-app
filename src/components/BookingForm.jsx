@@ -51,7 +51,19 @@ function BookingForm({ onSubmit, openModal, setOpenModal }) {
               <option value="2200">22:00</option>
             </select>
             <label htmlFor="guests">Number of guests</label>
-            <input
+            <select
+              name="guests"
+              id="guests"
+              value={info.number}
+              onChange={handleNumber}
+            >
+              {Array.from({ length: 10 }, (_, index) => (
+                <option key={index + 1} value={index + 1}>
+                  {index + 1}
+                </option>
+              ))}
+            </select>
+            {/* <input
               name="guests"
               type="number"
               placeholder="Select how many people"
@@ -59,7 +71,7 @@ function BookingForm({ onSubmit, openModal, setOpenModal }) {
               max={"10"}
               id="guests"
               onChange={handleNumber}
-            />
+            /> */}
             <label htmlFor="occasion">Occasion</label>
             <select
               name="occasion"

@@ -39,9 +39,9 @@ test("calls the onSubmit function when the form is submitted", () => {
   fireEvent.change(screen.getByLabelText("Choose time"), {
     target: { value: "1800" },
   });
-  // fireEvent.change(screen.getByLabelText("Number of guests"), {
-  //   target: { value: "4" },
-  // });
+  fireEvent.change(screen.getByLabelText("Number of guests"), {
+    target: { value: "4" },
+  });
 
   fireEvent.change(screen.getByLabelText("Occasion"), {
     target: { value: "birthday" },
@@ -49,7 +49,7 @@ test("calls the onSubmit function when the form is submitted", () => {
 
   expect(screen.getByLabelText("Choose date")).toHaveValue("2023-06-23");
   expect(screen.getByLabelText("Choose time")).toHaveValue("1800");
-  // expect(screen.getByLabelText("Number of guests")).toHaveValue("4");
+  expect(screen.getByLabelText("Number of guests")).toHaveValue("4");
 
   expect(screen.getByLabelText("Occasion")).toHaveValue("birthday");
 
