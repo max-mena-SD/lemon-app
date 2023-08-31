@@ -10,3 +10,10 @@
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     column-gap: 20px;
 }
+
+@media (max-width:768px) {
+    .testimonial{
+        height: 42vh;
+        overflow: hidden;
+    }
+}

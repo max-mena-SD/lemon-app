@@ -32,12 +32,32 @@ article h2{
     font-family: karla;
     font-weight: 800;
 }
+.socialIcons{display: none;}
 
 @media (max-width:768px) {
-    footer{
-        display: flex;
+    img{
+        display: none;
     }
-    footer article{
+    footer{
         display: block;
     }
+    footer article {
+        display: block;
+    }
+    footer article li{
+        width: 40%;
+        float: left;
+        align-items: center;
+    }
+    footer h2{
+        width: 100%;
+        text-align: center;
+        display: inline-block;
+    }
+    .socialIcons{
+      padding: 0;
+      margin: 0;
+      display: flex;
+    }
+    .socialLinks{display: none;}
 }
