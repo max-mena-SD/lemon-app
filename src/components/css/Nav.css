@@ -28,3 +28,9 @@ nav {
     background-color: #edefee;
   }
   
+  @media (max-width:768px) {
+    .nav-links li{
+      margin: 0;
+    }
+    
+  }

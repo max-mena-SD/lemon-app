@@ -70,10 +70,48 @@
   font-family: karla;
   font-size: 1.1em;
 }
-p.orderLink {
+.orderLink {
   padding-top: 2em;
   padding-bottom: 2em;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 1em;
   font-weight: 600;
 }
+ @media ( max-width: 768px ) {
+  .menu{
+    display: flex;
+  }
+  .itemTop{
+    display: block;
+  }
+  .itemTop h2{
+    display: block;
+    text-align: center;
+  }
+  .itemTop Button{
+    display: block;
+    margin: 0 auto ;
+  }
+
+  .itemBottom{
+    display: grid;
+    grid-template-rows: repeat(3, auto);
+    padding-top: 2rem;
+    column-gap: 0;
+  }
+  .specialItem h4, .specialItem .orderLink{
+    text-align: center;
+    font-size: large;
+  }
+  .specialItem .truncate{
+    font-size: 14px;
+    white-space: normal;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 1.5rem;
+    max-height: 4.5rem;
+  }
+  .imageItem{
+    display: none;
+  }
+ }

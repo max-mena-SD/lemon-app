@@ -66,3 +66,21 @@
 .reservation Button {
   margin: 1em 1em 1em 0;
 }
+
+
+@media (max-width: 768px) {
+  .reservation{
+    display: block;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  /* .left, .right{
+    float: right;
+  }
+  .reservation Button{
+    align-items: end;
+  } */
+  img, .right{
+    display: none;
+  }
+}

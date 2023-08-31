@@ -27,3 +27,9 @@ main {
   grid-template-rows: repeat(4, auto);
 }
 
+@media (max-width:768px) {
+  main{
+    margin: 0;
+  }
+  
+}

@@ -55,3 +55,10 @@
   padding: 5%;
   text-align: end;
 }
+
+@media (max-width: 768px) {
+  .image img {
+    border-radius: 0;
+  }
+  
+}

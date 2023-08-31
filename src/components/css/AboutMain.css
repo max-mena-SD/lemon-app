@@ -44,3 +44,22 @@
   -webkit-box-orient: vertical;
   overflow: hidden;
 } */
+
+@media (max-width: 768px) {
+  .about{
+    display: flex;
+  }
+  .left{
+    padding: 0 1rem;
+    margin: 0 auto  ;
+    float: left;
+  }
+  .left p{
+    padding: 0;
+    width: 95%;
+  }
+  .right{
+    display: none;
+  }
+  
+}

@@ -25,7 +25,7 @@ function MenuMain() {
             <div className="itemTitle">
               <h4>Greek Salad</h4> <h4 className="priceTag">$12.99</h4>
             </div>
-            <p>
+            <p className="truncate">
               Lorem ipsum dolor, sit amet consectetur adipisicing elit.
               Eligendi, suscipit explicabo fugit dolorum distinctio sit.
               Tenetur, enim debitis quaerat quod architecto provident.
@@ -40,7 +40,7 @@ function MenuMain() {
             <div className="itemTitle">
               <h4>Bruchetta</h4> <h4 className="priceTag">$12.99</h4>
             </div>
-            <p>
+            <p className="truncate">
               Lorem ipsum dolor, sit amet consectetur adipisicing elit.
               Eligendi, suscipit explicabo fugit dolorum distinctio sit.
               Tenetur, enim debitis quaerat quod architecto provident.
@@ -59,7 +59,7 @@ function MenuMain() {
             <div className="itemTitle">
               <h4>Lemon dessert</h4> <h4 className="priceTag">$12.99</h4>
             </div>
-            <p>
+            <p className="truncate">
               Lorem ipsum dolor, sit amet consectetur adipisicing elit.
               Eligendi, suscipit explicabo fugit dolorum distinctio sit.
               Tenetur, enim debitis quaerat quod architecto provident.
